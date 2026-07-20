@@ -1,0 +1,1318 @@
+[
+  {
+    "name": "AI_Fabric_QOS_Classification_Custom",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "QOSDATA",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "community_list",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "standardCommunityListEntries",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "expandedCommunityListEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "dc_border_gateway_inband_setup",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "moreNdDataSubnet",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "dciIntfEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "dc_border_inband_setup",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "moreNdDataSubnet",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "edgeRouterEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Default_Network_Extension_Universal",
+    "templateType": "profile",
+    "templateSubType": "vxlan",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "gatewayIpV6Address",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "dhcpServers",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "secondaryGWs",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "MULTISITE_CONN",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "switchRouteTargetImport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "switchRouteTargetExport",
+        "parameterType": "string[]"
+      }
+    ]
+  },
+  {
+    "name": "Default_Network_Universal",
+    "templateType": "profile",
+    "templateSubType": "vxlan",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "gatewayIpV6Address",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "dhcpServers",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "secondaryGWs",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Default_VRF_Extension_Universal",
+    "templateType": "profile",
+    "templateSubType": "vxlan",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "switchRouteTargetImport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "switchRouteTargetExport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "switchRouteTargetImportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "switchRouteTargetExportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetImport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetExport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetImportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetExportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetImportMvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetExportMvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "cloudRouteTargetImportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "cloudRouteTargetExportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "VRF_LITE_CONN",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "MULTISITE_CONN",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Default_VRF_Universal",
+    "templateType": "profile",
+    "templateSubType": "vxlan",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "switchRouteTargetImport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "switchRouteTargetExport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "switchRouteTargetImportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "switchRouteTargetExportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetImport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetExport",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetImportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetExportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetImportMvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "routeTargetExportMvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "cloudRouteTargetImportEvpn",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "cloudRouteTargetExportEvpn",
+        "parameterType": "string[]"
+      }
+    ]
+  },
+  {
+    "name": "Dynamic_Load_Balancing_CS",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "STATIC_PIN_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Dynamic_Load_Balancing_S1",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "STATIC_PIN_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Easy_Fabric",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "DNS_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "NTP_SERVER_IP_LIST",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "NTP_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SERVER_IP_LIST",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SEV",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "bootstrapSubnetCollection",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_EXPORTER_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_RECORD_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_MONITOR_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Easy_Fabric_Classic",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "DNS_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "NTP_SERVER_IP_LIST",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "NTP_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SERVER_IP_LIST",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SEV",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "bootstrapSubnetCollection",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_EXPORTER_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_RECORD_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_MONITOR_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_SAMPLER_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Easy_Fabric_eBGP",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "DNS_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "NTP_SERVER_IP_LIST",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "NTP_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SERVER_IP_LIST",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SEV",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "bootstrapSubnetCollection",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_EXPORTER_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_RECORD_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_MONITOR_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Easy_Fabric_IOS_XE",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "bootstrapSubnetCollection",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Easy_Fabric_IPFM",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ASM_GROUP_RANGES",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "DNS_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "NTP_SERVER_IP_LIST",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "NTP_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SERVER_IP_LIST",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SEV",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "SYSLOG_SERVER_VRF",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "bootstrapSubnetCollection",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ERSPAN",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "sources",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "destinations",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "vlanFilters",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Ext_VRF_Lite_SVI",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "BGP_NEIGHBOR_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "extended_community_list",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "standardEntries",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "expandedEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "External_Fabric",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "bootstrapSubnetCollection",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_EXPORTER_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_RECORD_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_MONITOR_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_SAMPLER_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "DNS_SERVER_VRF",
+        "parameterType": "string[]"
+      }
+    ]
+  },
+  {
+    "name": "igp_redistribute_static",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_ipfm_l3_port",
+    "templateType": "policy",
+    "templateSubType": "interfaceEthernet",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "IGMP_GROUP_RANGES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_ipfm_loopback",
+    "templateType": "policy",
+    "templateSubType": "interfaceLoopback",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "SECONDARY_IP_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_ipfm_subif",
+    "templateType": "policy",
+    "templateSubType": "interfaceEthernet",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "IGMP_GROUP_RANGES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_port_channel_pvlan_host",
+    "templateType": "policy",
+    "templateSubType": "interfacePortChannel",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "MAPPING_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "ASSOCIATION_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_port_channel_trunk_host",
+    "templateType": "policy",
+    "templateSubType": "interfacePortChannel",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "vlanMappingEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_pvlan_host",
+    "templateType": "policy",
+    "templateSubType": "interfaceEthernet",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "MAPPING_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "ASSOCIATION_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_trunk_classic",
+    "templateType": "policy",
+    "templateSubType": "interfaceEthernet",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "MST_PATH_COST_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "MST_PORT_PRIO_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_trunk_host",
+    "templateType": "policy",
+    "templateSubType": "interfaceEthernet",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "vlanMappingEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_vlan_dhcp_relay_internal",
+    "templateType": "policy",
+    "templateSubType": "interfaceVlan",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "dhcpServers",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_vpc_pvlan_host",
+    "templateType": "policy",
+    "templateSubType": "interfaceVpc",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "MAPPING_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "ASSOCIATION_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_vpc_pvlan_po",
+    "templateType": "policy",
+    "templateSubType": "interfacePortChannel",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "MAPPING_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "ASSOCIATION_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_vpc_trunk_host",
+    "templateType": "policy",
+    "templateSubType": "interfaceVpc",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "vlanMappingEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "int_vpc_trunk_po_11_1",
+    "templateType": "policy",
+    "templateSubType": "interfacePortChannel",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "vlanMappingEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_int_vlan",
+    "templateType": "policy",
+    "templateSubType": "interfaceVlan",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "dhcpServers",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_ptp_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "SUB_XPATH_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_telemetry_cli",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "IOS_XE_VRF",
+    "templateType": "profile",
+    "templateSubType": "vxlan",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "VRF_LITE_CONN",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_vrf_rt",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "RT_IMPORT",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "RT_EXPORT",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "RT_IMPORT_EVPN",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "RT_EXPORT_EVPN",
+        "parameterType": "string[]"
+      }
+    ]
+  },
+  {
+    "name": "ip_acl",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "ACES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "IPFM_Classic",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "bootstrapSubnetCollection",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_generic_multicast_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_nat_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_telemetry_config",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_vrf",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ASM_GROUP_RANGES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_vrf_msdp",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "MSDP_PEERS",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv4_prefix_list",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv4_prefix_list_internal",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "CUSTOM_ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv6_acl",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "ACES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv6_prefix_list",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv6_prefix_list_internal",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "CUSTOM_ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "issu_custom_report",
+    "templateType": "report",
+    "templateSubType": "upgrade",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "switches",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "ndiReports",
+        "parameterType": "struct"
+      },
+      {
+        "name": "checks",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "issu_prepost_custom_report",
+    "templateType": "report",
+    "templateSubType": "upgrade",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "switches",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "checks",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "LAN_Classic",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "bootstrapSubnetCollection",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_EXPORTER_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_RECORD_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_MONITOR_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "NETFLOW_SAMPLER_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "lan_ptp_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "lan_ptp_telemetry_config",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "MSD_Fabric",
+    "templateType": "fabric",
+    "templateSubType": "notApplicable",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "routeServerCollection",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Network_Classic",
+    "templateType": "profile",
+    "templateSubType": "vlan",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "dhcpServers",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Pvlan_Secondary_Network",
+    "templateType": "profile",
+    "templateSubType": "vxlan",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "MULTISITE_CONN",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "route_map_enhanced",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "entries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "seed_switch",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "BOOTSTRAP_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "service_acl",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "ACES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "service_epbr",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "CHAINING",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Service_Network_Universal",
+    "templateType": "profile",
+    "templateSubType": "service",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "secondaryGWs",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "sgm",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "groups",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "contracts",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "classMaps",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "policies",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "sgm_switch",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "groups",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "associations",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "classMaps",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "policies",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "SPAN",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "sources",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "vlanFilters",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "static_route_v4_v6",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "staticRoutes",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "TelemetrySensor_EF",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "PATHCMDS",
+        "parameterType": "string[]"
+      }
+    ]
+  },
+  {
+    "name": "vlan_acl",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "matches",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "VRF_Classic",
+    "templateType": "profile",
+    "templateSubType": "vlan",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "staticRoutes",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "VRF_LITE_CONN",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "vrf_classic_main",
+    "templateType": "policy",
+    "templateSubType": "vlan",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "VRF_LITE_CONN",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "vrf_jython_internal",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "VRF_LITE_CONN",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "vrf_rt",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "RT_IMPORT",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "RT_EXPORT",
+        "parameterType": "string[]"
+      }
+    ]
+  }
+]

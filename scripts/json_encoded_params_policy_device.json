@@ -1,0 +1,562 @@
+[
+  {
+    "name": "AI_Fabric_QOS_Classification_Custom",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "QOSDATA",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "community_list",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "standardCommunityListEntries",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "expandedCommunityListEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "dc_border_gateway_inband_setup",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "moreNdDataSubnet",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "dciIntfEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "dc_border_inband_setup",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "moreNdDataSubnet",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "edgeRouterEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Dynamic_Load_Balancing_CS",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "STATIC_PIN_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Dynamic_Load_Balancing_S1",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "STATIC_PIN_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ERSPAN",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "sources",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "destinations",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "vlanFilters",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "Ext_VRF_Lite_SVI",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "BGP_NEIGHBOR_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "extended_community_list",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "standardEntries",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "expandedEntries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "igp_redistribute_static",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_ptp_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "SUB_XPATH_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_telemetry_cli",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_vrf_rt",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "RT_IMPORT",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "RT_EXPORT",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "RT_IMPORT_EVPN",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "RT_EXPORT_EVPN",
+        "parameterType": "string[]"
+      }
+    ]
+  },
+  {
+    "name": "ip_acl",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "ACES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_generic_multicast_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_nat_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_telemetry_config",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_vrf",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ASM_GROUP_RANGES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipfm_vrf_msdp",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "MSDP_PEERS",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv4_prefix_list",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv4_prefix_list_internal",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "CUSTOM_ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv6_acl",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "ACES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv6_prefix_list",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "ipv6_prefix_list_internal",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "ENTRY_LIST",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "CUSTOM_ENTRY_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "lan_ptp_telemetry",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "lan_ptp_telemetry_config",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "parameterType": "ipAddress[]"
+      }
+    ]
+  },
+  {
+    "name": "route_map_enhanced",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "entries",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "seed_switch",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "BOOTSTRAP_LIST",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "service_acl",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "ACES",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "service_epbr",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "CHAINING",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "sgm",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "groups",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "contracts",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "classMaps",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "policies",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "sgm_switch",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "groups",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "associations",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "classMaps",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "policies",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "SPAN",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "sources",
+        "parameterType": "structureArray"
+      },
+      {
+        "name": "vlanFilters",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "static_route_v4_v6",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "staticRoutes",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "TelemetrySensor_EF",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "PATHCMDS",
+        "parameterType": "string[]"
+      }
+    ]
+  },
+  {
+    "name": "vlan_acl",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "pythonCli",
+    "composite_parameters": [
+      {
+        "name": "matches",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "vrf_jython_internal",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "python",
+    "composite_parameters": [
+      {
+        "name": "VRF_LITE_CONN",
+        "parameterType": "structureArray"
+      }
+    ]
+  },
+  {
+    "name": "vrf_rt",
+    "templateType": "policy",
+    "templateSubType": "device",
+    "contentType": "templateCli",
+    "composite_parameters": [
+      {
+        "name": "RT_IMPORT",
+        "parameterType": "string[]"
+      },
+      {
+        "name": "RT_EXPORT",
+        "parameterType": "string[]"
+      }
+    ]
+  }
+]

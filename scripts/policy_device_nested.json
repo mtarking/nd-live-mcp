@@ -1,0 +1,1835 @@
+[
+  {
+    "name": "AI_Fabric_QOS_Classification_Custom",
+    "params": [
+      {
+        "name": "QOSDATA",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "classMapLabel1",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "matchType",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "matchValues",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "qosGroupLabel1Int",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "community_list",
+    "params": [
+      {
+        "name": "standardCommunityListEntries",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "action",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "blackhole",
+            "type": "boolean",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "communityNumbers",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "gracefulShutdown",
+            "type": "boolean",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "internet",
+            "type": "boolean",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "localAsn",
+            "type": "boolean",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "noAdvertise",
+            "type": "boolean",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "noExport",
+            "type": "boolean",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "sequenceNumber",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "expandedCommunityListEntries",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "action",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "communityNumberRegex",
+            "type": "string",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "sequenceNumber",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "dc_border_gateway_inband_setup",
+    "params": [
+      {
+        "name": "moreNdDataSubnet",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "additionalNdDataSubnet",
+            "type": "ipV4AddressWithSubnet",
+            "mandatory": "false",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "dciIntfEntries",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "dciIntfName",
+            "type": "interface",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "intfIpAddress",
+            "type": "ipV4Address",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "intfIpMaskLen",
+            "type": "integer",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "dc_border_inband_setup",
+    "params": [
+      {
+        "name": "moreNdDataSubnet",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "additionalNdDataSubnet",
+            "type": "ipV4AddressWithSubnet",
+            "mandatory": "false",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "edgeRouterEntries",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "edgeRouterBgpAs",
+            "type": "string",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "edgeRouterIp",
+            "type": "ipV4Address",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "edgeRouterName",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "localIntfName",
+            "type": "interface",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dynamic_Load_Balancing_CS",
+    "params": [
+      {
+        "name": "STATIC_PIN_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "DST_PORT",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dynamic_Load_Balancing_S1",
+    "params": [
+      {
+        "name": "STATIC_PIN_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "DST_PORT",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ERSPAN",
+    "params": [
+      {
+        "name": "sources",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "DIRECTION_INTERFACE",
+            "type": "enum",
+            "mandatory": "\"SOURCE_TYPE!=sup-eth0&&SOURCE_TYPE!=vlan\"",
+            "valid": "tx,rx,both"
+          },
+          {
+            "name": "SOURCE_TYPE",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "vlan,interface,sup-eth0"
+          },
+          {
+            "name": "SOURCE_VALUE",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "destinations",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "DEST_VALUE",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "vlanFilters",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "FILTER_VALUE",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ext_VRF_Lite_SVI",
+    "params": [
+      {
+        "name": "BGP_NEIGHBOR_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "NEIGHBOR_ASN",
+            "type": "string",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "NEIGHBOR_IP",
+            "type": "ipV4Address",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "NEIGHBOR_IPv6",
+            "type": "ipV6Address",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "bgpPassword",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "bgpPasswordKeyType",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "3,6,7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "extended_community_list",
+    "params": [
+      {
+        "name": "standardEntries",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "action",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "nonTransitiveGenericExtendedCollection",
+            "type": "string[]",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "routeTargetCollection",
+            "type": "string[]",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "routerMacCollection",
+            "type": "string[]",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "sequenceNumber",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "siteOfOriginCollection",
+            "type": "string[]",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "transitiveGenericExtendedCollection",
+            "type": "string[]",
+            "mandatory": "false",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "expandedEntries",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "action",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "communityNumberRegex",
+            "type": "string",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "sequenceNumber",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "igp_redistribute_static",
+    "params": [
+      {
+        "name": "ENTRY_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "IP_MASK",
+            "type": "ipV4AddressWithSubnet",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "NEXT_HOP_IP",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "SEQ_NUM",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_ptp_telemetry",
+    "params": [
+      {
+        "name": "SUB_XPATH_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "subscription_id",
+            "type": "integer",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "xpath",
+            "type": "string",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_telemetry_cli",
+    "params": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "ios_xe_vrf_rt",
+    "params": [
+      {
+        "name": "RT_IMPORT",
+        "type": "string[]",
+        "fields": []
+      },
+      {
+        "name": "RT_EXPORT",
+        "type": "string[]",
+        "fields": []
+      },
+      {
+        "name": "RT_IMPORT_EVPN",
+        "type": "string[]",
+        "fields": []
+      },
+      {
+        "name": "RT_EXPORT_EVPN",
+        "type": "string[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "ip_acl",
+    "params": [
+      {
+        "name": "ACES",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "permit,deny,remark"
+          },
+          {
+            "name": "CUSTOM_PROTOCOL",
+            "type": "integer",
+            "mandatory": "\"PROTOCOL==custom\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_IP",
+            "type": "string",
+            "mandatory": "\"ACTION!=remark\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_PORT",
+            "type": "string",
+            "mandatory": "\"DEST_PORT_ACTION!=none && DEST_PORT_ACTION!=port-range\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_PORT_ACTION",
+            "type": "enum",
+            "mandatory": "\"ACTION!=remark\"",
+            "valid": "equal-to,greater-than,less-than,not-equal-to,port-range,none"
+          },
+          {
+            "name": "DEST_PORT_RANGE_END",
+            "type": "string",
+            "mandatory": "\"DEST_PORT_ACTION==port-range\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_PORT_RANGE_START",
+            "type": "string",
+            "mandatory": "\"DEST_PORT_ACTION==port-range\"",
+            "valid": null
+          },
+          {
+            "name": "ICMP_ADVANCED_OPTION",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "administratively-prohibited,echo,echo-reply,general-parameter-problem,host-isolated,host-precedence-unreachable,host-redirect,host-tos-redirect,host-tos-unreachable,host-unknown,host-unreachable,net-unreachable,network-unknown,option-missing,packet-too-big,parameter-problem,port-unreachable,router-advertisement,router-solicitation,ttl-exceeded,unreachable"
+          },
+          {
+            "name": "PROTOCOL",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "icmp,ip,tcp,udp,eigrp,ospf,pim,igmp,custom"
+          },
+          {
+            "name": "REMARK_COMMENT",
+            "type": "string",
+            "mandatory": "\"ACTION==remark\"",
+            "valid": null
+          },
+          {
+            "name": "SEQUENCE_NUMBER",
+            "type": "long",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "SRC_IP",
+            "type": "string",
+            "mandatory": "\"ACTION!=remark\"",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT",
+            "type": "string",
+            "mandatory": "\"SRC_PORT_ACTION!=none && SRC_PORT_ACTION!=port-range\"",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT_ACTION",
+            "type": "enum",
+            "mandatory": "\"ACTION!=remark\"",
+            "valid": "equal-to,greater-than,less-than,not-equal-to,port-range,none"
+          },
+          {
+            "name": "SRC_PORT_RANGE_END",
+            "type": "string",
+            "mandatory": "\"SRC_PORT_ACTION==port-range\"",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT_RANGE_START",
+            "type": "string",
+            "mandatory": "\"SRC_PORT_ACTION==port-range\"",
+            "valid": null
+          },
+          {
+            "name": "TCP_ADVANCED_OPTION",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "ack,fin,established,psh,rst,syn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ipfm_generic_multicast_telemetry",
+    "params": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "ipfm_nat_telemetry",
+    "params": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "ipfm_telemetry",
+    "params": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "ipfm_telemetry_config",
+    "params": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      },
+      {
+        "name": "TELEM_RCVR_IPV6_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "ipfm_vrf",
+    "params": [
+      {
+        "name": "ASM_GROUP_RANGES",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ENABLE_SPT_THRESHOLD",
+            "type": "boolean",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "GROUP_ADDRESS",
+            "type": "ipV4Address",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "PREFIX",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ipfm_vrf_msdp",
+    "params": [
+      {
+        "name": "MSDP_PEERS",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "PEER_IP",
+            "type": "ipV4Address",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ipv4_prefix_list",
+    "params": [
+      {
+        "name": "ENTRY_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "EXACT_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "EXPLICIT_MASK",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IP_MASK",
+            "type": "ipV4AddressWithSubnet",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "MAX_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "MIN_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "SEQ_NUM",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ipv4_prefix_list_internal",
+    "params": [
+      {
+        "name": "ENTRY_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "EXACT_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "EXPLICIT_MASK",
+            "type": "ipV4Address",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IP_MASK",
+            "type": "ipV4AddressWithSubnet",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "MAX_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "MIN_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "SEQ_NUM",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "CUSTOM_ENTRY_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "EXACT_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "EXPLICIT_MASK",
+            "type": "ipV4Address",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IP_MASK",
+            "type": "ipV4AddressWithSubnet",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "MAX_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "MIN_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "SEQ_NUM",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ipv6_acl",
+    "params": [
+      {
+        "name": "ACES",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "permit,deny,remark"
+          },
+          {
+            "name": "CUSTOM_PROTOCOL",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "DEST_IP",
+            "type": "string",
+            "mandatory": "\"ACTION!=remark\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_PORT",
+            "type": "string",
+            "mandatory": "\"DEST_PORT_ACTION!=none && DEST_PORT_ACTION!=port-range\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_PORT_ACTION",
+            "type": "enum",
+            "mandatory": "\"ACTION!=remark\"",
+            "valid": "equal-to,greater-than,less-than,not-equal-to,port-range,none"
+          },
+          {
+            "name": "DEST_PORT_RANGE_END",
+            "type": "string",
+            "mandatory": "\"DEST_PORT_ACTION==port-range\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_PORT_RANGE_START",
+            "type": "string",
+            "mandatory": "\"DEST_PORT_ACTION==port-range\"",
+            "valid": null
+          },
+          {
+            "name": "ICMP_ADVANCED_OPTION",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "beyond-scope,destination-unreachable,echo-request,echo-reply,hop-limit,mld-query,mld-report,mld-reduction,mldv2,nd-ns,nd-na,no-admin,no-route,packet-too-big,parameter-problem,port-unreachable,reassembly-timeout,router-advertisement,router-solicitation,unreachable"
+          },
+          {
+            "name": "PROTOCOL",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "icmp,ipv6,tcp,udp,eigrp,pim,custom"
+          },
+          {
+            "name": "REMARK_COMMENT",
+            "type": "string",
+            "mandatory": "\"ACTION==remark\"",
+            "valid": null
+          },
+          {
+            "name": "SEQUENCE_NUMBER",
+            "type": "long",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "SRC_IP",
+            "type": "string",
+            "mandatory": "\"ACTION!=remark\"",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT",
+            "type": "string",
+            "mandatory": "\"SRC_PORT_ACTION!=none && SRC_PORT_ACTION!=port-range\"",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT_ACTION",
+            "type": "enum",
+            "mandatory": "\"ACTION!=remark\"",
+            "valid": "equal-to,greater-than,less-than,not-equal-to,port-range,none"
+          },
+          {
+            "name": "SRC_PORT_RANGE_END",
+            "type": "string",
+            "mandatory": "\"SRC_PORT_ACTION==port-range\"",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT_RANGE_START",
+            "type": "string",
+            "mandatory": "\"SRC_PORT_ACTION==port-range\"",
+            "valid": null
+          },
+          {
+            "name": "TCP_ADVANCED_OPTION",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "ack,fin,established,psh,rst,syn"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ipv6_prefix_list",
+    "params": [
+      {
+        "name": "ENTRY_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "EXACT_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "EXPLICIT_MASK",
+            "type": "ipV6Address",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IP_MASK",
+            "type": "ipV6AddressWithSubnet",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "MAX_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "MIN_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "SEQ_NUM",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ipv6_prefix_list_internal",
+    "params": [
+      {
+        "name": "ENTRY_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "EXACT_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "EXPLICIT_MASK",
+            "type": "ipV6Address",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IP_MASK",
+            "type": "ipV6AddressWithSubnet",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "MAX_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "MIN_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "SEQ_NUM",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "CUSTOM_ENTRY_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "ACTION",
+            "type": "enum",
+            "mandatory": "",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "EXACT_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "EXPLICIT_MASK",
+            "type": "ipV6Address",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IP_MASK",
+            "type": "ipV6AddressWithSubnet",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "MAX_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "MIN_PREFIX_LEN",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "SEQ_NUM",
+            "type": "long",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "lan_ptp_telemetry",
+    "params": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "lan_ptp_telemetry_config",
+    "params": [
+      {
+        "name": "TELEM_RCVR_IP_LIST",
+        "type": "ipAddress[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "route_map_enhanced",
+    "params": [
+      {
+        "name": "entries",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "action",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "permit,deny"
+          },
+          {
+            "name": "ruleEntries",
+            "type": "structureArray",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "sequenceNumber",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "seed_switch",
+    "params": [
+      {
+        "name": "BOOTSTRAP_LIST",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "INTF",
+            "type": "interface",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "IPV4",
+            "type": "ipV4Address",
+            "mandatory": "",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "service_acl",
+    "params": [
+      {
+        "name": "ACES",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "DEST_IP",
+            "type": "string",
+            "mandatory": "\"SRC_IP!=''\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_IPV6",
+            "type": "string",
+            "mandatory": "\"SRC_IPV6!=''\"",
+            "valid": null
+          },
+          {
+            "name": "DEST_PORT",
+            "type": "string",
+            "mandatory": "\"PROTOCOL!=ip && PROTOCOL!=icmp\"",
+            "valid": null
+          },
+          {
+            "name": "PROTOCOL",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "icmp,ip,tcp,udp"
+          },
+          {
+            "name": "SEQUENCE_NUMBER",
+            "type": "long",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "SRC_IP",
+            "type": "string",
+            "mandatory": "\"SRC_IPV6==''\"",
+            "valid": null
+          },
+          {
+            "name": "SRC_IPV6",
+            "type": "string",
+            "mandatory": "\"SRC_IP==''\"",
+            "valid": null
+          },
+          {
+            "name": "SRC_PORT",
+            "type": "string",
+            "mandatory": "\"PROTOCOL!=ip && PROTOCOL!=icmp\"",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "service_epbr",
+    "params": [
+      {
+        "name": "CHAINING",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "EPBR_SERVICE_ENDPOINT_NAME",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "FAIL_ACTION",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "none,drop,forward,bypass"
+          },
+          {
+            "name": "SEQUENCE_NUMBER",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "sgm",
+    "params": [
+      {
+        "name": "groups",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "groupId",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "groupName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "interfaces",
+            "type": "structureArray",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "ipAddr",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "ipType",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "ipv4,ipv6"
+          },
+          {
+            "name": "matchType",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "connected-endpoints,external-subnets"
+          },
+          {
+            "name": "vlan",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "contracts",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "dgt",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "direction",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "bidir,unidir"
+          },
+          {
+            "name": "policyName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "sgt",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "classMaps",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "desc",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "filterName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "match",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "policies",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "actions",
+            "type": "structureArray",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "desc",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "filterName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "policyName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "sgm_switch",
+    "params": [
+      {
+        "name": "groups",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "groupId",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "groupName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "interfaces",
+            "type": "structureArray",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "ipAddr",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "ipType",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "ipv4,ipv6"
+          },
+          {
+            "name": "matchType",
+            "type": "enum",
+            "mandatory": "false",
+            "valid": "connected-endpoints,external-subnets"
+          },
+          {
+            "name": "vlan",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "vrfName",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "associations",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "contracts",
+            "type": "structureArray",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "vrfName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "classMaps",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "desc",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "filterName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "match",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "policies",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "actions",
+            "type": "structureArray",
+            "mandatory": "",
+            "valid": null
+          },
+          {
+            "name": "desc",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "filterName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "policyName",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SPAN",
+    "params": [
+      {
+        "name": "sources",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "DIRECTION_INTERFACE",
+            "type": "enum",
+            "mandatory": "\"SOURCE_TYPE!=sup-eth0\"",
+            "valid": "tx,rx,both"
+          },
+          {
+            "name": "SOURCE_TYPE",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "vlan,interface,sup-eth0"
+          },
+          {
+            "name": "SOURCE_VALUE",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      },
+      {
+        "name": "vlanFilters",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "FILTER_VALUE",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "static_route_v4_v6",
+    "params": [
+      {
+        "name": "staticRoutes",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "IP_VERSION",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "IPv4,IPv6"
+          },
+          {
+            "name": "ipv4Prefix",
+            "type": "ipV4AddressWithSubnet",
+            "mandatory": "\"IP_VERSION==IPv4\"",
+            "valid": null
+          },
+          {
+            "name": "ipv6Prefix",
+            "type": "ipV6AddressWithSubnet",
+            "mandatory": "\"IP_VERSION==IPv6\"",
+            "valid": null
+          },
+          {
+            "name": "nextHop",
+            "type": "ipAddress",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "nextHopName",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "nextHopVrf",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "routePreference",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "tag",
+            "type": "long",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "trackId",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TelemetrySensor_EF",
+    "params": [
+      {
+        "name": "PATHCMDS",
+        "type": "string[]",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "vlan_acl",
+    "params": [
+      {
+        "name": "matches",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "MATCH_TYPE",
+            "type": "enum",
+            "mandatory": "true",
+            "valid": "ip,ipv6,mac"
+          },
+          {
+            "name": "MATCH_VALUE",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "vrf_jython_internal",
+    "params": [
+      {
+        "name": "VRF_LITE_CONN",
+        "type": "structureArray",
+        "fields": [
+          {
+            "name": "AUTO_VRF_LITE_FLAG",
+            "type": "boolean",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "DOT1Q_ID",
+            "type": "integer",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "ENABLE_IFC_NETFLOW",
+            "type": "boolean",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IF_NAME",
+            "type": "interface",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "IPV6_MASK",
+            "type": "ipV6AddressWithSubnet",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IPV6_NEIGHBOR",
+            "type": "ipV6Address",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "IP_MASK",
+            "type": "ipV4AddressWithSubnet",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "IP_TAG",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "MTU",
+            "type": "integer",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "NEIGHBOR_ASN",
+            "type": "string",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "NEIGHBOR_IP",
+            "type": "ipV4Address",
+            "mandatory": "true",
+            "valid": null
+          },
+          {
+            "name": "PEER_VRF_NAME",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          },
+          {
+            "name": "VRF_LITE_JYTHON_TEMPLATE",
+            "type": "string",
+            "mandatory": "false",
+            "valid": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "vrf_rt",
+    "params": [
+      {
+        "name": "RT_IMPORT",
+        "type": "string[]",
+        "fields": []
+      },
+      {
+        "name": "RT_EXPORT",
+        "type": "string[]",
+        "fields": []
+      }
+    ]
+  }
+]

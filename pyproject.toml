@@ -1,0 +1,30 @@
+[project]
+name = "nd-live-mcp"
+version = "0.1.0"
+description = "Read-only live Nexus Dashboard (ND) client + MCP server for AgenticOps, validation, and tests."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=2.0",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "respx>=0.21",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["nd"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = [
+    "live: hits a real ND (skipped unless ND_* env is set)",
+]
