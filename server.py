@@ -18,7 +18,15 @@ import sys
 from fastmcp import FastMCP
 
 from nd import ConfigError, NdClient, NdConfig, NdError
-from nd.tools import fabrics, interfaces, networks, switches, templates, vrfs
+from nd.tools import (
+    fabrics,
+    interfaces,
+    networks,
+    resources,
+    switches,
+    templates,
+    vrfs,
+)
 
 logging.basicConfig(stream=sys.stderr, level=logging.INFO)
 logger = logging.getLogger("nd-live")
@@ -29,8 +37,10 @@ mcp = FastMCP(
         "Read-only access to a live Cisco Nexus Dashboard. Use nd_list_fabrics / "
         "nd_fabric_health for fabric status, nd_list_switches and "
         "nd_switch_interfaces for devices, nd_list_vrfs / nd_list_networks for "
-        "overlays, and nd_list_templates / nd_get_template for the embedded "
-        "template library. Results are compact by default; pass detail=true for "
+        "overlays, nd_list_resources for resource-manager pool allocations "
+        "(vPC domain IDs, underlay IPs, L3 VNIs, loopbacks), and "
+        "nd_list_templates / nd_get_template for the embedded template "
+        "library. Results are compact by default; pass detail=true for "
         "full JSON on a specific item."
     ),
 )
@@ -123,6 +133,33 @@ def nd_list_networks(fabric: str, detail: bool = False) -> str:
 def nd_get_network(fabric: str, name: str) -> str:
     """Get full details for a single network."""
     return _run(networks.get_network, fabric, name)
+
+
+# -- Resource manager --------------------------------------------------------
+
+
+@mcp.tool()
+def nd_list_resources(
+    fabric: str,
+    pool_name: str | None = None,
+    switch_id: str | None = None,
+    pre_allocated: bool | None = None,
+    detail: bool = False,
+) -> str:
+    """List resource-manager pool allocations in a fabric (ID / IP / SUBNET).
+
+    Filter by pool_name, switch_id, or pre_allocated. Shows the real poolName,
+    entityName format, and scopeType for allocations such as vPC domain IDs,
+    underlay IPs, L3 VNIs, and loopbacks.
+    """
+    return _run(
+        resources.list_resources,
+        fabric,
+        pool_name=pool_name,
+        switch_id=switch_id,
+        pre_allocated=pre_allocated,
+        detail=detail,
+    )
 
 
 # -- Templates ---------------------------------------------------------------
