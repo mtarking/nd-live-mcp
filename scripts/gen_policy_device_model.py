@@ -162,8 +162,13 @@ def main() -> int:
 
     includes: dict[str, list] = {}
     body: list[str] = []
+    root_lines: list[str] = [
+        "# ── Root document: every template map is an OPTIONAL include so a data",
+        "#    file sets only the templates it uses. Definitions follow the 2nd '---'.",
+    ]
     for t in templates:
         map_name = f"policy_{snake(t['name'])}"
+        root_lines.append(f"{map_name}: include('{map_name}', required=False)")
         body.append(f"# ── {t['name']}  ({t['type']}/{t['subtype']}) "
                     + "─" * max(2, 60 - len(t['name'])))
         body.append(f"{map_name}:")
@@ -197,6 +202,9 @@ def main() -> int:
         "# schema — this is a proposal for review.",
         "#",
         "# Conventions:",
+        "#   * two YAML documents: root references each template map as an include,",
+        "#     then a '---' separator, then all include definitions (Yamale only",
+        "#     registers named includes from documents AFTER the first '---').",
         "#   * snake_case field names (source template uses camelCase / UPPER_SNAKE)",
         "#   * structureArray  -> list(include('<map>_<param>'))",
         "#   * struct          -> include('<map>_<param>')",
@@ -211,7 +219,11 @@ def main() -> int:
         "",
     ]
 
-    inc_lines = ["", "# ── include(...) definitions (struct elements) ─────────────────────────────"]
+    root_lines.append("")
+    root_lines.append("---")
+    root_lines.append("")
+
+    inc_lines = ["# ── include(...) definitions (template maps + struct elements) ─────────────"]
     for name in sorted(includes):
         inc_lines.append(f"{name}:")
         for fld, val in includes[name]:
@@ -219,10 +231,34 @@ def main() -> int:
         inc_lines.append("")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text("\n".join(header + body + inc_lines) + "\n", encoding="utf-8")
+    OUT.write_text("\n".join(header + root_lines + body + inc_lines) + "\n", encoding="utf-8")
+    _verify_schema(OUT)
     print(f"Wrote proposal -> {OUT}")
     print(f"Templates: {len(templates)}  include defs: {len(includes)}")
     return 0
+
+
+def _verify_schema(path: Path) -> None:
+    """Fail loudly if the generated schema has any unresolved include reference.
+
+    `yamale.make_schema` alone does NOT resolve includes, so a missing document
+    separator would pass a load-only check while breaking real validation. This
+    asserts every `include('X')` has a matching definition in `schema.includes`.
+    """
+    import yamale
+
+    schema = yamale.make_schema(str(path))
+    # Scan schema lines only (skip full-line comments so header examples like
+    # include('<map>_<param>') are not mistaken for real references).
+    code = "\n".join(
+        ln for ln in path.read_text(encoding="utf-8").splitlines()
+        if not ln.lstrip().startswith("#")
+    )
+    referenced = set(re.findall(r"include\('([^']+)'", code))
+    missing = sorted(referenced - set(schema.includes))
+    if missing:
+        raise SystemExit(f"Unresolved include(s) in {path.name}: {missing}")
+    print(f"Verified {len(schema.includes)} includes; all references resolve.")
 
 
 def _walk(param: dict, dsl_node: dict | None = None) -> dict:
